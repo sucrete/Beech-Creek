@@ -1,0 +1,51 @@
+@mixin mobile-h3 {
+  font-size: 33px;
+  line-height: 110%;
+}
+@mixin center-it {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin monospaced($color: black) {
+  font-family: "Sackers", monospace;
+  font-size: 14px;
+  letter-spacing: .5px;
+  text-transform: lowercase;
+  color: $color;
+  @media screen and (max-width: 768px) {
+    font-size: 14px;
+    line-height: 1;
+  }
+}
+
+@mixin cornered($corner-color: black) {
+  // corners ruleset
+  --b: 1px; /* thickness of the border */
+  --c: $corner-color; /* color of the border */
+  --w: 14px; /* length of the lines in the corner */
+  border: var(--b) solid #0000; /* space for the border */
+  --_g: #0000 90deg, var(--c) 0;
+  --_p: var(--w) var(--w) border-box no-repeat;
+
+  background: conic-gradient(
+        from 90deg at top var(--b) left var(--b),
+        var(--_g)
+      )
+      0 0 / var(--_p),
+    conic-gradient(from 180deg at top var(--b) right var(--b), var(--_g)) 100% 0 /
+      var(--_p),
+    conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--_g)) 0 100% /
+      var(--_p),
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--_g))
+      100% 100% / var(--_p);
+}
+
+@mixin mobile-text-body() {
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+    line-height: 23px;
+    letter-spacing: .2px;
+  }
+}

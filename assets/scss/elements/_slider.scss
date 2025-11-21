@@ -1,0 +1,47 @@
+// pulled from tutorial by "Coding with Robby" on YT (https://youtu.be/nAjR0Oj0J8E?si=WZ3L94f1BkI2uMUP)
+// https://github.com/Coding-with-Robby/infinite-logo-carousel/tree/main
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.slider {
+  // overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.slider:after {
+  right: 0;
+}
+
+.slide {
+  display: inline-block;
+  animation: 45s slide infinite linear;
+}
+
+//~ not necessary but helpful for logo slider
+// .slide img {
+//   height: 40px;
+//   margin: 0 40px;
+// }
+
+//~ if you want slider to pause when hovered over
+// .slider:hover .slide {
+//   animation-play-state: paused;
+// }
+
+//~ the HTML will look like this
+// the three (or more) slides are important
+
+// <div class="slider">
+//   <div class="slide"></div>
+//   <div class="slide"></div>
+//   <div class="slide"></div>
+// </div>

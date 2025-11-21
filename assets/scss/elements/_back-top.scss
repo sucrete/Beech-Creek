@@ -1,0 +1,93 @@
+$progress-wrap-size: 55px;
+.progress-wrap {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  height: $progress-wrap-size;
+  width: $progress-wrap-size;
+  cursor: pointer;
+  display: block;
+  border-radius: 999px;
+  z-index: 10000;
+  opacity: 0;
+  transform: translateY(15px);
+  // padding: 1rem;
+  background-color: #00000000;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 0 0 transparent;
+  transition: all 0.25s ease;
+
+  .up-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: auto;
+  }
+  &:hover {
+    bottom: 32px;
+    box-shadow: rgba(50, 50, 93, 0.125) 0px 0px 27px -6px, rgba(0, 0, 0, 0.15) 0px 0px 16px -8px;
+  }
+}
+
+.progress-wrap.active-progress {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.progress-wrap::before {
+  position: absolute;
+  font-family: var(--font-3);
+  content: "\f077";
+  text-align: center;
+  line-height: 46px;
+  font-size: 24px;
+  opacity: 0;
+  background: var(--color-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  left: 0;
+  top: 0;
+  height: 46px;
+  width: 46px;
+  cursor: pointer;
+  display: block;
+  z-index: 2;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.progress-wrap:hover::before {
+  opacity: 0;
+}
+
+.progress-wrap svg path {
+  fill: none;
+}
+
+.progress-wrap svg {
+  color: $accent-color-2;
+  border-radius: 50%;
+  background: transparent;
+}
+
+.progress-wrap svg.progress-circle path {
+  stroke: $accent-color-2;
+  stroke-width: 4px;
+  box-sizing: border-box;
+  -webkit-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.home-blue {
+  .progress-wrap svg.progress-circle path {
+    stroke: var(--color-accent);
+  }
+
+  .progress-wrap::after {
+    border-color: var(--color-accent);
+    box-shadow: 0px 3px 20px 6px #0742e952;
+    color: var(--color-accent);
+  }
+}

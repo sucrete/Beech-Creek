@@ -1,0 +1,128 @@
+.nav-area {
+  ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+      a {
+        padding: 38px 0;
+        display: block;
+        color: black;
+        font-size: 14px;
+        letter-spacing: .5px;
+        font-family: $header-font;
+        position: relative;
+        text-transform: lowercase;
+        &:after {
+          background: none repeat scroll 0 0 transparent;
+          bottom: 3.65rem;
+          content: "";
+          display: block;
+          height: 1.25px;
+          left: 50%;
+          position: absolute;
+          background: #ffffff;
+          transition: width 0.3s ease 0s, left 0.3s ease 0s,
+            opacity 0.3s ease 0s;
+          width: 0;
+          opacity: 0;
+        }
+        &:hover {
+          color: #000000d7;
+          &:after {
+            width: 100%;
+            left: 0;
+            opacity: 1;
+          }
+        }
+        &.active {
+          color: black;
+          &:after {
+            width: 100%;
+            left: 0;
+            opacity: 1;
+          }
+          &.book-tee-time-btn {
+            &:after {
+              opacity: 0;
+            }
+            &:hover {
+              &:after {
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.header--sticky.sticky {
+  .nav-area ul li > a.nav-link {
+    padding: 25px 0;
+  }
+}
+.header--sticky.header-area-four {
+  &:not(.home) {
+    .header-four-wrapper {
+      .nav-area {
+        nav {
+          .parent-nav {
+            .nav-link {
+              &:after {
+                // background: white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.has-dropdown {
+  a {
+    display: flex;
+    align-items: center;
+    .chevron {
+      height: 5px;
+      width: auto;
+      top: -11px;
+      font-size: 11px;
+      margin-left: 1px;
+      transition: 0.25s ease;
+      transform-origin: center;
+      -webkit-text-stroke: 0.5px;
+      &::after {
+        display: none;
+      }
+
+      &::before {
+        top: -11px;
+        font-size: 11px;
+        right: -14px;
+        transition: 0.25s ease;
+        transform-origin: center;
+        -webkit-text-stroke: 0.5px;
+      }
+    }
+  }
+
+  &:hover {
+    & > a {
+      .chevron {
+        transform: rotate(180deg);
+        &::before {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

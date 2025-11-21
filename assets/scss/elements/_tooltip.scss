@@ -1,0 +1,94 @@
+.map-tooltip {
+    position: relative;
+
+    &::after,
+    &::before {
+        --scale: 0;
+        --arrow-size: 8px;
+        position: absolute;
+        top: -5px;
+        left: 50%;
+        transform: translateX(-50%) translateY(var(--translate-y, 0)) scale(var(--scale));
+        transition: 150ms transform;
+        transform-origin: bottom center;
+    }
+
+    &::before {
+        --translate-y: calc(-100% - var(--arrow-size));
+        content: attr(data-tooltip);
+        color: var(--color-white);
+        padding: 5px 8px;
+        background: var(--color-primary);
+        width: max-content;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    &::after {
+        --translate-y: calc(-1 * var(--arrow-size));
+        content: '';
+        border: var(--arrow-size) solid transparent;
+        border-top-color: var(--color-primary);
+    }
+
+    &:hover {
+
+        &::before,
+        &::after {
+            --scale: 1;
+        }
+    }
+}
+
+.thumbnail-map {
+    position: relative;
+}
+
+.map-tool-tip-single {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    &.two {
+        right: 150px;
+        left: auto;
+        top: 120px;
+    }
+
+    &.three {
+        left: 150px;
+        right: auto;
+        top: 150px;
+    }
+
+    &.four {
+        left: 500px;
+        right: auto;
+        top: 60px;
+    }
+
+    &.five {
+        right: 100px;
+        bottom: 120px;
+        top: auto;
+        left: auto;
+    }
+
+    &.six {
+        left: 350px;
+        bottom: 120px;
+        top: auto;
+        right: auto;
+    }
+
+    .map-tooltip {
+        span {
+            display: block;
+            height: 18px;
+            width: 18px;
+            border-radius: 50%;
+            background: var(--color-primary);
+            animation: pulse-2 1s linear infinite;
+        }
+    }
+}

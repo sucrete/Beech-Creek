@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Beech Creek Golf Club | Sumter, SC</title>
+    <meta
+      name="description"
+      content="Oconee Country Club is a semi-private golf club that was built in 1948 on an old farmstead just outside the city limits of Seneca, S.C."
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/images/fav.png"
+    />
+
+    <link
+      rel="stylesheet preload"
+      href="assets/css/vendor/bootstrap.min.css"
+      as="style"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link
+      rel="stylesheet preload"
+      href="assets/css/plugins/fontawesome.css"
+      as="style"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <link
+      rel="stylesheet preload"
+      href="assets/css/plugins/metismenu.css"
+      as="style"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- primary css -->
+    <link rel="stylesheet preload" href="css/style.css" as="style" />
+
+    <!-- svg inject -->
+    <script defer src="assets/js/plugins/svg-inject.js"></script>
+
+    <!-- Adobe Typekit -->
+    <link rel="stylesheet" href="https://use.typekit.net/dqw8ssk.css" />
+
+    <!-- header Lit component -->
+    <script type="module" src="./lit/header.js"></script>
+
+    <!-- CTA Lit component -->
+    <script type="module" src="./lit/cta.js"></script>
+
+    <!-- footer Lit component -->
+    <script type="module" src="./lit/footer.js"></script>
+
+    <!-- fullCalendar -->
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js"></script>
+    <!-- fullCalendar initiation -->
+    <script src="assets/js/listBuilder.js"></script>
+    <!-- moment.js - time parsing -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.0/moment.min.js"></script>
+    <!-- Sanity data fetch -->
+    <script src="assets/js/fetchData.js"></script>
+
+    <!-- embla carousel -->
+    <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+    <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
+  </head>
+
+  <body style="position: relative">
+    <!-- Facebook SDK start -->
+    <div id="fb-root"></div>
+    <script
+      async
+      defer
+      crossorigin="anonymous"
+      src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v24.0&appId=APP_ID"
+    ></script>
+    <!-- Facebook SDK end -->
+
+    <!-- header area start -->
+    <header class="header-area-four header--sticky home style-white">
+      <!-- <div class="backdrop"></div> -->
+      <my-header style="position: relative; z-index: 7"> </my-header>
+      <div class="gradient-bg"></div>
+    </header>
+    <!-- header area end -->
+
+    <!-- rts banner four start -->
+    <div
+      class="banner banner-four-area banner-four-bg rts-section-gap jarallax home-page"
+      data-img-position="50% 130%"
+      data-img-size="cover"
+    >
+      <div class="overlay"></div>
+      <div class="container cornered-container">
+        <div class="row">
+          <div class="col">
+            <h2 class="home-banner-heading home-banner-heading-desktop">
+              <span class="text-anim italicized">Welcome </span>
+              <span class="text-anim"> to </span><br />
+              <span class="text-anim"> Beech</span>
+              <span class="text-anim"> Creek Golf Club </span>
+            </h2>
+            <h2 class="home-banner-heading home-banner-heading-mobile">
+              <span class="text-anim italicized">Welcome</span>
+              <span class="text-anim"> to </span><br />
+              <span class="text-anim"> Beech Creek </span><br />
+              <span class="text-anim"> Golf Club </span>
+            </h2>
+            <div class="cornered-box simple-anim">
+              Embrace golf within Sumter County's vibrant natural setting. Our
+              course features <b class="extra-bold">rolling topography</b> framed by lush mature
+              trees and abundant lowcountry wildlife. Get away from the everyday
+              with an <b class="extra-bold">unspoiled Carolina escape</b>.
+
+              <!-- <span class="remove-on-mobile">
+                Open to the public year-round, our course is known for its
+                undulating
+                <span class="p-italic">Diamond Zoysia</span>
+                greens and captivating vistas.</span
+              > -->
+            </div>
+          </div>
+        </div>
+        <div class="temperature-preview-wrapper">
+          <div class="location">sumter</div>
+          <div class="temperature-preview">
+            <div class="banner-temp">52</div>
+            <div>°</div>
+          </div>
+        </div>
+        <a
+          href="https://www.facebook.com/beechcreekgolfclub"
+          class="facebook-reveal"
+          target="_blank"
+        >
+          <img src="assets/images/svgs/f.svg" alt="" class="f injectable" /><img
+            src="assets/images/svgs/acebook.svg"
+            alt=""
+            class="acebook injectable"
+          />
+        </a>
+      </div>
+    </div>
+    <!-- rts banner four end -->
+
+    <section class="tres-links">
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="link-column">
+            <a href="#" class="intrasite-link">
+              <div class="link-title">Book Tee Time</div>
+              <div class="link-overlay"></div>
+            </a>
+          </div>
+          <div class="link-column">
+            <a href="#" class="intrasite-link">
+              <div class="link-title">Events</div>
+              <div class="link-overlay"></div>
+            </a>
+          </div>
+          <div class="link-column">
+            <a href="#" class="intrasite-link">
+              <div class="link-title">Online Store</div>
+              <div class="link-overlay"></div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-body breakdown mobile-padding">
+      <div class="container">
+        <div class="row g-5 justify-content-between">
+          <div
+            class="col-12 col-sm-6 wow fadeInUp d-flex flex-column justify-content-center"
+            data-wow-offset="120"
+            data-wow-delay=".1s"
+          >
+            <div class="pill opening-celebration-pill">
+              <img src="./assets/images/icons/two-leaves.svg" alt="" />
+              pure carolina charm
+            </div>
+            <div>
+              <h3>
+                <div class="italicized">Peaceful Rounds</div> in
+                Sumter County's Hills
+              </h3>
+              <p>
+                <b>Beech Creek Golf Club</b> is nestled in the historic "High
+                Hills of the Santee" and opened for play in 1989. The golf
+                course is located on the site of "The Battle of Beech Creek" and
+                is one of the most
+                <b>scenic pieces of property in Sumter County</b>, with
+                elevation changes which allow for views that go on for miles.
+                Unless the jets at nearby Shaw AFB are flying, you will be in
+                for a completely serene atmosphere. Playing at 6800 yards from
+                the back tees, Beech Creek offers an outstanding collection of
+                holes that are challenging and fair.
+              </p>
+              <p>
+                Located 3 miles from Shaw AFB, 10 minutes from Sumter and 35
+                minutes from downtown Columbia, Beech Creek is easily accessible
+                from I-20 and US 378/76.
+              </p>
+            </div>
+          </div>
+
+          <!-- Facebook feed column start -->
+          <div
+            class="col-12 col-sm-6 incentives-side wow fadeInUp"
+            data-wow-offset="120"
+            data-wow-delay=".2s"
+          >
+            <div
+              class="fb-page"
+              data-href="https://www.facebook.com/beechcreekgolfclub"
+              data-tabs="timeline"
+              data-width="500"
+              data-height=""
+              data-small-header="true"
+              data-adapt-container-width="true"
+              data-hide-cover="true"
+              data-show-facepile="true"
+            >
+              <blockquote
+                cite="https://www.facebook.com/beechcreekgolfclub"
+                class="fb-xfbml-parse-ignore"
+              >
+                <a href="https://www.facebook.com/beechcreekgolfclub"
+                  >Beech Creek Golf Club</a
+                >
+              </blockquote>
+            </div>
+          </div>
+          <!-- Facebook feed column end -->
+        </div>
+      </div>
+    </section>
+
+    <!-- gallery section start -->
+
+    <!-- <section>
+      <div class="container">
+        <div class="embla">
+          <div class="embla__viewport">
+            <div class="embla__container">
+              <div class="embla__slide">
+                <div class="embla__parallax">
+                  <div class="embla__parallax__layer">
+                    <img
+                      class="embla__slide__img embla__parallax__img"
+                      src="https://picsum.photos/600/350?v=1"
+                      alt="Your alt text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide">
+                <div class="embla__parallax">
+                  <div class="embla__parallax__layer">
+                    <img
+                      class="embla__slide__img embla__parallax__img"
+                      src="https://picsum.photos/600/350?v=2"
+                      alt="Your alt text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide">
+                <div class="embla__parallax">
+                  <div class="embla__parallax__layer">
+                    <img
+                      class="embla__slide__img embla__parallax__img"
+                      src="https://picsum.photos/600/350?v=3"
+                      alt="Your alt text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide">
+                <div class="embla__parallax">
+                  <div class="embla__parallax__layer">
+                    <img
+                      class="embla__slide__img embla__parallax__img"
+                      src="https://picsum.photos/600/350?v=4"
+                      alt="Your alt text"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="embla__slide">
+                <div class="embla__parallax">
+                  <div class="embla__parallax__layer">
+                    <img
+                      class="embla__slide__img embla__parallax__img"
+                      src="https://picsum.photos/600/350?v=5"
+                      alt="Your alt text"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!-- gallery section end -->
+
+    <!-- events section -->
+    <section class="hours-table">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-12 col-md-4 pt-3">
+            <h3 class="events-list-heading">Upcoming Events</h3>
+
+            <a
+              href="/calendar.html"
+              class="all-events-link all-events-link-desktop"
+              style="color: black"
+            >
+              view all events
+            </a>
+          </div>
+          <div class="col-12 col-md-8 shorten-on-mobile">
+            <div
+              class="events-list-container wow fadeInUp"
+              data-wow-offset="120"
+              data-wow-delay=".1s"
+            >
+              <div
+                id="events-list"
+                class="fc fc-media-screen fc-direction-ltr fc-theme-standard"
+              >
+                <div class="events-list-wrapper d-flex flex-column-reverse">
+                  <div class="event-list-item">
+                    <div class="event-content-row">
+                      <div class="date-side">
+                        <div class="date-box">
+                          <div>
+                            <div class="event-month">aug</div>
+                            <div class="event-day">12</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content-side">
+                        <div class="event-list-title">
+                          Conroe Jr. Golf Association City Championship
+                        </div>
+                        <div class="event-list-description">
+                          Course will re-open after the tournament at 2:30pm.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event-list-item includes-register-button">
+                    <div class="event-content-row">
+                      <div class="date-side">
+                        <div class="date-box">
+                          <div>
+                            <div class="event-month">aug</div>
+                            <div class="event-day">26</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content-side">
+                        <div class="event-list-title">
+                          Conroe Jr. Golf Association City Championship
+                        </div>
+                        <div class="event-list-description">
+                          Format: 2 person scramble on the front nine, shamble
+                          on the back 9, Saturday and Sunday. Entry Fee: $350
+                          per team includes practice round Friday, Horse Race
+                          Friday at 5pm.
+                        </div>
+                        <a
+                          href="https://www.google.com"
+                          class="register-button pill"
+                          target="_blank"
+                        >
+                          <span class="button-text">register</span>
+                          <span class="kinked-arrow">↳</span></a
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div class="event-list-item">
+                    <div class="event-content-row">
+                      <div class="date-side">
+                        <div class="date-box">
+                          <div>
+                            <div class="event-month">sep</div>
+                            <div class="event-day">06</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="content-side">
+                        <div class="event-list-title">
+                          Conroe Jr. Golf Association City Championship
+                        </div>
+                        <div class="event-list-description">
+                          Format: 2 person scramble on the front nine, shamble
+                          on the back 9, Saturday and Sunday. Entry Fee: $350
+                          per team includes practice round Friday, Horse Race
+                          Friday at 5pm.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a
+              href="/calendar.html"
+              class="all-events-link all-events-link-mobile"
+              style="color: black"
+            >
+              view all events
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- events section end -->
+
+    <footer>
+      <my-footer></my-footer>
+    </footer>
+    <!-- pre loader area start -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+    <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP START 🟡🟡🟡🟡🟡🟡 -->
+    <div id="side-bar" class="side-bar header-two" dir="ltr">
+      <button class="close-icon-menu" aria-label="footer_Button">
+        <svg
+          class="side-menu-cross"
+          xmlns="http://www.w3.org/2000/svg"
+          version="1.1"
+          viewBox="0 0 512 512"
+        >
+          <polygon
+            class="st0"
+            points="513.3 44 468 -1.3 256 210.8 44 -1.3 -1.3 44 210.8 256 -1.3 468 44 513.3 256 301.2 468 513.3 513.3 468 301.2 256 513.3 44"
+          />
+        </svg>
+      </button>
+      <div class="mobile-menu-main">
+        <nav class="nav-main mainmenu-nav mt--30">
+          <ul class="mainmenu metismenu" id="mobile-menu-active">
+            <li>
+              <a href="greens-fees.html" class="main">Greens Fees</a>
+            </li>
+            <li>
+              <a href="membership-fees.html" class="main">Membership</a>
+            </li>
+            <li>
+              <a href="calendar.html" class="main">Calendar</a>
+            </li>
+            <li class="has-droupdown">
+              <a href="#" class="main" aria-expanded="false">About</a>
+              <ul class="submenu mm-collapse">
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html#message-us">Message Us</a></li>
+              </ul>
+            </li>
+            <li>
+              <a
+                href="book-tee-time.html"
+                class="rts-btn btn-primary my-btn sidebar-btn"
+              >
+                Book tee time
+                <img
+                  class="injectable"
+                  src="assets/images/icons/14.svg"
+                  alt=""
+                />
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- 🟡🟡🟡🟡🟡🟡 MOBILE MENU MARKUP END 🟡🟡🟡🟡🟡🟡 -->
+
+    <script defer src="assets/js/plugins/jquery.js"></script>
+    <script defer src="assets/js/vendor/waw.js"></script>
+    <script defer src="assets/js/vendor/jarallax.js"></script>
+    <script defer src="assets/js/plugins/smooth-scroll.js"></script>
+    <script defer src="assets/js/plugins/metismenu.js"></script>
+    <script defer src="assets/js/vendor/bootstrap.min.js"></script>
+    <script defer src="assets/js/main.js"></script>
+    <script src="./assets/js/weather.js "></script>
+
+    <!-- <script type="module" src="./assets/js/embla.js"></script> -->
+
+    <script>
+      const landingBanner = document.getElementsByClassName("banner")[0];
+      window.addEventListener("load", function () {
+        landingBanner.classList.add("loading-finished");
+      });
+    </script>
+  </body>
+</html>

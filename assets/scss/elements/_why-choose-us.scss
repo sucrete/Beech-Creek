@@ -1,0 +1,116 @@
+.why-choose-us-faq-area {
+    background: linear-gradient(101.07deg, #F8FAFF 2.25%, #FDF8FF 85.45%);
+}
+
+.why-choose-faq-thumbnail {
+    img {
+        width: 100%;
+    }
+}
+
+.faq-why-choose-left-accordion {
+    p {
+        margin-bottom: 20px;
+    }
+
+    .accordion {
+        background: transparent;
+        max-width: 80%;
+        @media #{$mdsm-layout} {
+            max-width: 100%;
+        }
+        .accordion-item {
+            background-color: transparent;
+            background: transparent;
+            border: none;
+            padding-left: 0;
+            padding-right: 0;
+            border-bottom: 1px solid #EAF0FF;
+            padding: 7px 0;
+
+            .accordion-header {
+                background: transparent;
+
+                button {
+                    background: transparent;
+                    font-size: 18px;
+                    color: #0C1018;
+                    border-bottom: none;
+                    box-shadow: none;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .accordion-body {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.single-pricing-wrapper-choose {
+    padding: 29px;
+    border: 1px solid #D1D1D1;
+
+    .pricing-head {
+        text-align: center;
+
+        .pre {
+            background: #F1F1FF;
+            display: block;
+            max-width: max-content;
+            margin: auto;
+            padding: 4px 17px;
+            color: var(--color-primary);
+        }
+
+        .pricing-area {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .title{
+                @media #{$sm-layout} {
+                    margin-bottom: 0;
+                }
+            }
+            .time {
+                color: rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    .rts-btn {
+        max-width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    .rts-btn.btn-border:hover::after {
+        opacity: 1;
+        transform: scaleX(2) scaleY(1.5);
+    }
+
+    .body {
+        .check-single {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 10px 0;
+
+            p {
+                margin: 0;
+                font-size: 15px;
+            }
+
+            &.disable {
+                p {
+                    color: rgba(0, 0, 0, 0.4);
+                }
+            }
+        }
+    }
+}
