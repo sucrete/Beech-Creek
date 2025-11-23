@@ -40,7 +40,10 @@ section {
           margin-bottom: 3.5rem;
           .fc-toolbar-chunk {
             .fc-toolbar-title {
-              font-size: 47px;
+              font-size: 52px;
+              font-family: $heading-font;
+              // font-weight: 300;
+              letter-spacing: 0;
             }
             &:last-of-type {
               display: flex;
@@ -114,7 +117,7 @@ section {
                   text-transform: uppercase;
                   font-size: 12px;
                   letter-spacing: 3px;
-                  font-weight: 600;
+                  font-weight: 800;
                   padding-bottom: 1.5rem;
                 }
               }
@@ -128,7 +131,7 @@ section {
                       text-decoration: none;
                       font-size: 16px;
                       padding-right: 8px;
-                      font-weight: 400;
+                      font-weight: 700;
                     }
                     .fc-day-other {
                       background-color: transparent;
@@ -144,7 +147,7 @@ section {
                       .fc-daygrid-day-top {
                         // color: white;
                         .fc-daygrid-day-number {
-                          font-weight: 500;
+                          font-weight: 800;
                         }
                       }
                     }
@@ -433,7 +436,8 @@ $outline-color: #e6e6e6;
 //* home page events list
 section {
   &.hours-table,
-  &.course-policies {
+  &.course-policies,
+  &.scorecard {
     background-color: #eff4f4;
     background-repeat: no-repeat;
     background-size: 70%;
@@ -453,7 +457,7 @@ section {
       .row {
         [class*="col"] {
           .events-list-heading {
-            font-size: 42px;
+            font-size: 52px;
             margin-bottom: 11px;
             position: relative;
             z-index: 7;
@@ -660,6 +664,26 @@ section {
             color: rgba(255, 255, 255, 0.927);
             box-shadow: rgba(0, 0, 0, 0.2) 0px 10px 15px -3px,
               rgba(0, 0, 0, 0.09) 0px 4px 6px -2px;
+          }
+        }
+      }
+    }
+    &#scorecard {
+      background-color: transparent;
+      .container {
+        .row {
+          [class*="col"] {
+            .scorecard-link {
+              display: block;
+              border-radius: 29px;
+              transition: all .25s ease;
+              box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px -3px, rgba(0, 0, 0, 0.075) 0px 4px 6px -2px;
+              overflow: hidden;
+              &:hover {
+                transform: translateY(-2px);
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 25px -5px, rgba(0, 0, 0, 0.07) 0px 10px 10px -5px;
+              }
+            }
           }
         }
       }

@@ -20,7 +20,7 @@ document
     btn.textContent = "Sending...";
 
     const serviceID = "default_service";
-    const templateID = "template_u910u8k";
+    const templateID = "template_obscpdi";
 
     emailjs.sendForm(serviceID, templateID, this).then(
       () => {

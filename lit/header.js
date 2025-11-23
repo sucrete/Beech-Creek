@@ -76,7 +76,7 @@ export class Header extends LitElement {
                 <nav>
                   <ul class="parent-nav">
                      <li>
-                      <a class="nav-link" href="calendar.html">Online Store</a>
+                      <a class="nav-link" href="https://www.beechcreekgolfclub.com/OnlineStore">Online Store</a>
                     </li>
                     <li class="has-dropdown doesnt-have-mr">
                       <a class="nav-link" href="#">
@@ -108,7 +108,7 @@ export class Header extends LitElement {
                           </a>
                         </li>
                         <li>
-                          <a href="scorecard.html">
+                          <a href="contact.html#scorecard">
                             <img
                               src="/assets/images/icons/sackers-chevron.svg"
                               class="injectable chevron"

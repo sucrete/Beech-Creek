@@ -56,18 +56,6 @@ document.addEventListener("DOMContentLoaded", function () {
                           "[]"
                         )
                       );
-                      // console.log("today's date: ", moment().format("YYYY-MM-DD"))
-                      // console.log("title: ", seg.def.title)
-                      // console.log(
-                      //   "start: ",
-                      //   moment(seg.range.start)
-                      //     .add(1, "days")
-                      //     .format("YYYY-MM-DD")
-                      // );
-                      // console.log(
-                      //   "end: ",
-                      //   moment(seg.range.end).format("YYYY-MM-DD")
-                      // );
                       return `
                   <div class="event-list-item event-list-item-limned ${
                     moment(moment().format("YYYY-MM-DD")).isBetween(
