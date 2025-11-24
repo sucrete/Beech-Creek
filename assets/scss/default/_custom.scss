@@ -49,13 +49,16 @@
       color: #262626;
       font-weight: 600;
     }
-    @media screen and (max-width: 550px) {
-      padding: 18px;
+    @media screen and (max-width: 600px) {
+      padding: 18px 24px 21px 17px;
       align-items: start;
       margin-top: 0rem;
+      .injectable {
+        width: 40px;
+      }
       p {
         font-size: 15px;
-        line-height: 1.15;
+        line-height: 1.4;
       }
     }
   }
@@ -204,9 +207,12 @@
     }
   }
   @media screen and (max-width: 600px) {
+    padding-top: 1.5rem;
     .container {
       .row {
-        .column-link {
+        gap: 1.5rem;
+        .link-column {
+          height: 117px;
           flex-basis: 100%;
         }
       }
@@ -2175,6 +2181,7 @@ section.perks {
     }
   }
   .breakdown {
+    
     .container {
       .row {
         h3 {
@@ -2200,6 +2207,10 @@ section.perks {
           padding-left: 0;
         }
       }
+    }
+    &.page-body {
+      padding-top: 6rem;
+      padding-bottom: 7rem;
     }
   }
   section {

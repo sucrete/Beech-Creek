@@ -504,7 +504,7 @@ footer {
                           li {
                             padding-bottom: 12px;
                             a {
-                              font-size: 16px;
+                              font-size: 14px;
                             }
                           }
                         }
@@ -521,7 +521,7 @@ footer {
                       }
                       .phone-link,
                       .address-link {
-                        font-size: 16px;
+                        font-size: 14px;
                         font-weight: 400;
                       }
                       .address-link {
@@ -533,7 +533,7 @@ footer {
                         padding-bottom: 4px;
                       }
                       .hours {
-                        font-size: 16px;
+                        font-size: 14px;
                       }
                     }
                   }
@@ -544,7 +544,7 @@ footer {
                 padding: 6rem 0 6rem 0;
                 .cornered-box {
                   .footer-logo {
-                    width: 190px;
+                    width: 224px;
                   }
                 }
               }
@@ -560,6 +560,12 @@ footer {
                           font-size: 36px;
                         }
                       }
+                    }
+                  }
+                  .today-weather-row {
+                    .weather {
+                      font-size: 19px;
+                      font-weight: 700;
                     }
                   }
                 }

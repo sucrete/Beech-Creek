@@ -138,25 +138,25 @@
             }
           }
 
-          &::after {
-            position: absolute;
-            content: "\f078";
-            font-family: "Font Awesome 6 pro" !important;
-            font-size: 16px;
-            right: 0;
-            font-weight: 400;
-            top: 5px;
-            padding: 8px 13px;
-            color: #fff;
-            background: $primary-color !important;
-            pointer-events: none;
-            cursor: pointer;
-          }
+          // &::after {
+          //   position: absolute;
+          //   content: "\f078";
+          //   font-family: "Font Awesome 6 pro" !important;
+          //   font-size: 16px;
+          //   right: 0;
+          //   font-weight: 400;
+          //   top: 5px;
+          //   padding: 8px 13px;
+          //   color: #fff;
+          //   background: $primary-color !important;
+          //   pointer-events: none;
+          //   cursor: pointer;
+          // }
 
           &.mm-active {
-            &::after {
-              content: "\f077";
-            }
+            // &::after {
+            //   content: "\f077";
+            // }
           }
 
           &.third-lvl {

@@ -648,6 +648,7 @@ section {
           font-weight: 800;
           font-size: 14px;
           padding: 11px 19px 14px 19px;
+          margin-top: 1.5rem;
           transition: all 0.25s ease;
           box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
             rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
@@ -676,12 +677,14 @@ section {
             .scorecard-link {
               display: block;
               border-radius: 29px;
-              transition: all .25s ease;
-              box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px -3px, rgba(0, 0, 0, 0.075) 0px 4px 6px -2px;
+              transition: all 0.25s ease;
+              box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 15px -3px,
+                rgba(0, 0, 0, 0.075) 0px 4px 6px -2px;
               overflow: hidden;
               &:hover {
                 transform: translateY(-2px);
-                box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 25px -5px, rgba(0, 0, 0, 0.07) 0px 10px 10px -5px;
+                box-shadow: rgba(0, 0, 0, 0.15) 0px 20px 25px -5px,
+                  rgba(0, 0, 0, 0.07) 0px 10px 10px -5px;
               }
             }
           }
@@ -905,6 +908,24 @@ section {
                 margin-top: 3rem;
                 padding-left: 0;
               }
+            }
+          }
+        }
+      }
+    }
+    &.scorecard#scorecard {
+      padding-top: 7rem;
+      padding-bottom: 7rem;
+      & > * {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .container {
+        .row {
+          [class*='col'] {
+            padding: 0 7px;
+            .scorecard-link {
+              border-radius: 13px;
             }
           }
         }

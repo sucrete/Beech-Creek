@@ -1164,7 +1164,7 @@ $subpage-height: 450px;
 
 .container-contact {
   @media #{$smlg-device} {
-    padding: 0 22px;
+    padding: 0 16px;
   }
 }
 
@@ -1207,7 +1207,7 @@ $subpage-height: 450px;
           display: unset;
         }
         line-height: 0.7;
-        font-size: 42px;
+        font-size: 52px;
         .br-1 {
           display: unset;
         }
@@ -1220,7 +1220,7 @@ $subpage-height: 450px;
       }
       .overlay {
         background-image: $mobile-home-page-gradient;
-        opacity: 1;
+        opacity: .7;
       }
     }
   }

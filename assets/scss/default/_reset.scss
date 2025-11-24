@@ -175,6 +175,11 @@ figure {
   margin: 0;
 }
 
+.remove-on-mobile {
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+}
 form {
   margin: 0;
 }

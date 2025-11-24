@@ -113,7 +113,7 @@ header .rts-btn {
     }
 
     @media #{$sm-layout} {
-      padding: 18px 5px 14px 0px;
+      padding: 18px 3px 14px 0px;
       margin-top: 5px;
     }
 
@@ -504,7 +504,7 @@ header {
                 }
               }
               .mobile-logo {
-                width: 258px;
+                width: 161px;
                 height: auto;
                 &-dark {
                   display: none;
@@ -523,6 +523,7 @@ header {
           .row {
             .header-four-wrapper {
               .logo-container {
+                top: 49%;
                 .logo {
                   &-dark,
                   &-white {
@@ -554,10 +555,10 @@ header {
           .container {
             .row {
               .header-four-wrapper {
-                padding: 9px 5px 17px 0px;
+                padding: 15px 5px 24px 0px;
                 .button-area-right-header {
                   .menu-btn-toggle {
-                    top: 5px;
+                    top: 4px;
                     position: relative;
                     svg {
                       rect {

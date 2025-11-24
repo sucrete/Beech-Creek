@@ -88,6 +88,32 @@ section {
         }
       }
     }
+    @media screen and (max-width: 768px) {
+      .container {
+        .row {
+          [class*='col'] {
+            h3 {
+              font-size: 38px;
+            }
+            ul {
+              li {
+                padding-left: 3px;
+              }
+            }
+          }
+        }
+      
+      }
+        .contact-area-form-wrapper {
+          .container-contact {
+            .row {
+              h3 {
+                font-size: 38px;
+              }
+            }
+          }
+        }
+    }
   }
 }
 

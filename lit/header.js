@@ -62,12 +62,12 @@ export class Header extends LitElement {
 
                 <!-- 🔸🔸🔸 mobile logos 🔸🔸🔸 -->
                 <img
-                  src="/assets/images/logo/OCC-Logo-Long.svg"
+                  src="/assets/images/logo/mobile-logo-light.svg"
                   alt=""
                   class="mobile-logo mobile-logo-white"
                 />
                 <img
-                  src="/assets/images/logo/OCC-Logo-Long-Dark.svg"
+                  src="/assets/images/logo/mobile-logo-dark.svg"
                   alt=""
                   class="mobile-logo mobile-logo-dark"
                 />
