@@ -521,12 +521,11 @@ section {
                             padding-bottom: 0px;
                           }
                           .event-day {
-                            font-family: "neue-haas-grotesk-text";
+                            font-family: $body-text-font;
                             font-size: 50px;
-                            font-weight: 400;
+                            font-weight: 600;
                             line-height: 0.75;
-                            color: $primary-color;
-                            // color: $lime;
+                            color: #002d25;
                           }
                         }
                       }
@@ -546,6 +545,7 @@ section {
                         line-height: 1.4;
                         letter-spacing: 0.2px;
                         font-size: 15px;
+                        font-weight: 600;
                         width: 100%;
                         color: #262626;
                         white-space: pre-line;
@@ -922,7 +922,7 @@ section {
       }
       .container {
         .row {
-          [class*='col'] {
+          [class*="col"] {
             padding: 0 7px;
             .scorecard-link {
               border-radius: 13px;
