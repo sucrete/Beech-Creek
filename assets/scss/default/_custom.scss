@@ -116,15 +116,11 @@
             color: white;
             position: relative;
             z-index: 7;
-            font-weight: 800;
-            font-size: 21px;
-            // transition: background-position linear;
-            // background: url("./../assets/images/decorative/white-bg-gradient-7.png");
-            // background-size: 500px 70px;
-            // background-repeat: no-repeat;
-            // background-clip: text;
-            // background-position: 20%;
-            // -webkit-text-fill-color: transparent;
+            font-weight: unset;
+            font-family: "Sackers";
+            font-size: 18px;
+            text-shadow: 0 0 15px BLACK;
+            text-transform: lowercase;
           }
           .link-overlay {
             position: absolute;
@@ -143,7 +139,7 @@
           background-image: url("./../images/beech-vista-4.jpg");
           .intrasite-link {
             .link-overlay {
-              background-color: rgba(rgb(0, 0, 0), 0.2);
+              background-color: rgba(rgb(0, 0, 0), 0.4);
             }
             .link-title {
               transition-duration: 0.32s;
@@ -152,7 +148,7 @@
           &:hover {
             .intrasite-link {
               .link-overlay {
-                background-color: rgba(0, 0, 0, 0.1);
+                background-color: rgba(0, 0, 0, 0.2);
               }
             }
           }
@@ -161,7 +157,7 @@
           background-image: url("./../images/beech-vista-9.jpg");
           .intrasite-link {
             .link-overlay {
-              background-color: rgba(0, 0, 0, 0.05);
+              background-color: rgba(0, 0, 0, 0.35);
             }
             .link-title {
               transition-duration: 0.42s;
@@ -171,7 +167,7 @@
           &:hover {
             .intrasite-link {
               .link-overlay {
-                background-color: rgba(255, 255, 255, 0.05);
+                background-color: rgba(0, 0, 0, 0.08);
               }
             }
           }
@@ -181,7 +177,7 @@
           background-position: center 30%;
           .intrasite-link {
             .link-overlay {
-              background-color: rgba(0, 0, 0, 0.22);
+              background-color: rgba(0, 0, 0, 0.45);
             }
             .link-title {
               transition-duration: 0.32s;
@@ -190,7 +186,7 @@
           &:hover {
             .intrasite-link {
               .link-overlay {
-                background-color: rgba(0, 0, 0, 0.12);
+                background-color: rgba(0, 0, 0, 0.25);
               }
             }
           }
@@ -2181,7 +2177,6 @@ section.perks {
     }
   }
   .breakdown {
-    
     .container {
       .row {
         h3 {

@@ -11,10 +11,9 @@ $progress-wrap-size: 55px;
   z-index: 10000;
   opacity: 0;
   transform: translateY(15px);
-  // padding: 1rem;
   background-color: #00000000;
   backdrop-filter: blur(6px);
-  box-shadow: 0 0 0 transparent;
+  box-shadow: 0 0 0 transparent, inset 0 0 0 3px #00000008;
   transition: all 0.25s ease;
 
   .up-arrow {
@@ -27,7 +26,7 @@ $progress-wrap-size: 55px;
   }
   &:hover {
     bottom: 32px;
-    box-shadow: rgba(50, 50, 93, 0.125) 0px 0px 27px -6px, rgba(0, 0, 0, 0.15) 0px 0px 16px -8px;
+    box-shadow: rgba(50, 50, 93, 0.125) 0px 0px 27px -6px, rgba(0, 0, 0, 0.15) 0px 0px 16px -8px, inset 0 0 0 3px #00000008;
   }
 }
 
