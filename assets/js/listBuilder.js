@@ -1,5 +1,6 @@
+//* Creates event list for home page 
 const calendarQuery =
-  "https://9bp0tyzf.api.sanity.io/v2025-10-20/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%0A%7D&perspective=published";
+  "https://s52wtqv4.api.sanity.io/v2025-12-18/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%0A%7D&perspective=published";
 
 const todaysDate = new Date();
 const futureDate = todaysDate.setMonth(todaysDate.getMonth() + 5);
@@ -18,9 +19,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const sortedSegs = segs.sort(
           (a, b) => new Date(b.range.start) - new Date(a.range.start)
         );
-        // console.log("sorted segs", sortedSegs);
-        // console.log("segs.length > 0?: ", segs.length > 0);
-        // console.log("segs[0].def", segs[0]?.def);
         let html =
           segs.length > 0
             ? ` <div class="events-list-wrapper events-list-wrapper-home d-flex flex-column-reverse">

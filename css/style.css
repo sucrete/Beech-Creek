@@ -12076,14 +12076,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(1) {
   z-index: 10;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(1):before {
   content: "1";
 }
 .slyde:nth-child(1).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12142,56 +12142,12 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(4) {
   z-index: 7;
-  transform: rotate(2deg) translate(-50%, -50%);
+  transform: rotate(0deg) translate(-50%, -50%);
 }
 .slyde:nth-child(4):before {
   content: "4";
 }
 .slyde:nth-child(4).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(2deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.active {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.active article {
-  opacity: 1;
-}
-
-.slyde:nth-child(5) {
-  z-index: 6;
-  transform: rotate(-2deg) translate(-50%, -50%);
-}
-.slyde:nth-child(5):before {
-  content: "5";
-}
-.slyde:nth-child(5).leave {
-  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-2deg) translate(-50%, -15rem);
-  opacity: 0;
-  pointer-events: none;
-  filter: sepia(0%);
-}
-.slyde.active {
-  transform: rotate(0) translate(-50%, -50%);
-  filter: sepia(0%);
-}
-.slyde.active article {
-  opacity: 1;
-}
-
-.slyde:nth-child(6) {
-  z-index: 5;
-  transform: rotate(0deg) translate(-50%, -50%);
-}
-.slyde:nth-child(6):before {
-  content: "6";
-}
-.slyde:nth-child(6).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
   transform: rotate(0deg) translate(-50%, -15rem);
   opacity: 0;
@@ -12206,16 +12162,60 @@ Copyright (c) 2015 Daniel Eden
   opacity: 1;
 }
 
+.slyde:nth-child(5) {
+  z-index: 6;
+  transform: rotate(-3deg) translate(-50%, -50%);
+}
+.slyde:nth-child(5):before {
+  content: "5";
+}
+.slyde:nth-child(5).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-3deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.active {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.active article {
+  opacity: 1;
+}
+
+.slyde:nth-child(6) {
+  z-index: 5;
+  transform: rotate(-1deg) translate(-50%, -50%);
+}
+.slyde:nth-child(6):before {
+  content: "6";
+}
+.slyde:nth-child(6).leave {
+  transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
+  transform: rotate(-1deg) translate(-50%, -15rem);
+  opacity: 0;
+  pointer-events: none;
+  filter: sepia(0%);
+}
+.slyde.active {
+  transform: rotate(0) translate(-50%, -50%);
+  filter: sepia(0%);
+}
+.slyde.active article {
+  opacity: 1;
+}
+
 .slyde:nth-child(7) {
   z-index: 4;
-  transform: rotate(3deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(7):before {
   content: "7";
 }
 .slyde:nth-child(7).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(3deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12230,14 +12230,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(8) {
   z-index: 3;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(-1deg) translate(-50%, -50%);
 }
 .slyde:nth-child(8):before {
   content: "8";
 }
 .slyde:nth-child(8).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(-1deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -12252,14 +12252,14 @@ Copyright (c) 2015 Daniel Eden
 
 .slyde:nth-child(9) {
   z-index: 2;
-  transform: rotate(-4deg) translate(-50%, -50%);
+  transform: rotate(2deg) translate(-50%, -50%);
 }
 .slyde:nth-child(9):before {
   content: "9";
 }
 .slyde:nth-child(9).leave {
   transition: 0.5s transform ease-in-out, 0.5s opacity ease-in-out;
-  transform: rotate(-4deg) translate(-50%, -15rem);
+  transform: rotate(2deg) translate(-50%, -15rem);
   opacity: 0;
   pointer-events: none;
   filter: sepia(0%);
@@ -15212,7 +15212,7 @@ section.hours-table .container .row [class*=col] .events-list-container #events-
 }
 section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-title, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-title, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-title {
   font-size: 21px;
-  padding-bottom: 0.45rem;
+  padding-bottom: 1.2rem;
   font-weight: 800;
 }
 section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-description, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-description, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .event-list-description {
@@ -15233,6 +15233,7 @@ section.hours-table .container .row [class*=col] .events-list-container #events-
   transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   padding: 6px 12px 6px 14px;
   box-shadow: none;
+  color: white;
 }
 section.hours-table .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .button-text, section.course-policies .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .button-text, section.scorecard .container .row [class*=col] .events-list-container #events-list .events-list-wrapper .event-list-item .event-content-row .content-side .register-button .button-text {
   transition: color 0.15s ease;
@@ -17784,7 +17785,6 @@ section.contact-page-body .contact-area-form-wrapper .container-contact .row h3 
   flex-direction: column;
   overflow-y: auto;
   overflow: visible;
-  background-image: url(./../assets/images/logo/oconee-logo-ring-light-grey.svg);
   background-repeat: no-repeat;
   background-size: 80%;
   background-position: 197% 50%;

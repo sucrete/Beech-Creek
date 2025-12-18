@@ -1,5 +1,6 @@
+//* This is for the Calendar (or "Events") page
 const calendarQuery =
-  "https://9bp0tyzf.api.sanity.io/v2025-10-20/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%2C%0A++++%22images%22%3A+*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%0A%7D&perspective=published";
+  "https://s52wtqv4.api.sanity.io/v2025-12-18/data/query/production?query=%7B%0A++%22events%22%3A+*%5B_type+%3D%3D+%22event%22%5D%2C%0A++%22images%22%3A+*%5B_type+%3D%3D+%22sanity.imageAsset%22%5D%0A%7D&perspective=published";
 
 document.addEventListener("DOMContentLoaded", function () {
   var cal = document.getElementById("calendar");
@@ -19,10 +20,10 @@ document.addEventListener("DOMContentLoaded", function () {
   //~ fetch data
   fetchData(calendarQuery).then((data) => {
     // Scrub data for multiday end date here, adding a day to end date (because of weirdness with FullCalendar)
+    // This also adds the "end: <end-date>" key to an event object if multidayEvent: true in that object
     const allEvents = data.events;
+    console.log(JSON.stringify(allEvents, null, 2));
     allEvents.forEach((event, index) => {
-      console.log("%cWorking?", "color:coral");
-      console.log(event.end);
       if (event?.multidayEvent) {
         event.end = moment(event.end).add(1, "days").format("YYYY-MM-DD");
       }
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //~ create custom view
     const { sliceEvents, createPlugin } = FullCalendar;
-
+    console.log("boofus");
     const CustomViewConfig = {
       classNames: ["custom-view"],
       content: function (props) {

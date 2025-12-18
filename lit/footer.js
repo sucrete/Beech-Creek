@@ -155,7 +155,7 @@ export class Footer extends LitElement {
               <div class="col-12 col-lg-4 text-center">
                 <a
                   class="link-to-studio no-underline"
-                  href="javascript:void(0)"
+                  href=" https://beech-creek.sanity.studio/"
                   target="_blank"
                 >
                   © Beech Creek Golf Club | ${new Date().getFullYear()}

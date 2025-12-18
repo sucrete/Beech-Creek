@@ -538,7 +538,7 @@ section {
                       width: 100%;
                       .event-list-title {
                         font-size: 21px;
-                        padding-bottom: 0.45rem;
+                        padding-bottom: 1.2rem;
                         font-weight: 800;
                       }
                       .event-list-description {
@@ -561,6 +561,7 @@ section {
                           cubic-bezier(0.175, 0.885, 0.32, 1.275);
                         padding: 6px 12px 6px 14px;
                         box-shadow: none;
+                        color: white;
                         .button-text {
                           transition: color 0.15s ease;
                           color: white;
