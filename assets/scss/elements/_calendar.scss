@@ -457,7 +457,7 @@ section {
       .row {
         [class*="col"] {
           .events-list-heading {
-            font-size: 52px;
+            font-size: 37px;
             margin-bottom: 11px;
             position: relative;
             z-index: 7;
@@ -916,7 +916,7 @@ section {
     }
     &.scorecard#scorecard {
       padding-top: 7rem;
-      padding-bottom: 7rem;
+      padding-bottom: 8rem;
       & > * {
         padding-left: 0;
         padding-right: 0;

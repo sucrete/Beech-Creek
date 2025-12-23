@@ -1477,7 +1477,7 @@ section.perks {
 
 //~ Rates/Greens Fees
 .rates-page-body {
-  padding-top: 17rem;
+  padding-top: 14rem;
   padding-bottom: 17rem;
   background-color: #fafafa;
   position: relative;
@@ -1626,6 +1626,20 @@ section.perks {
   }
   &.membership {
     padding-bottom: 15rem;
+    .container {
+      .row {
+        h3 {
+          font-size: 40px;
+          @media screen and (max-width: 768px) {
+            font-size: 27px;
+            // padding: 0;
+          }
+        }
+        &>p {
+          padding-bottom: 3rem;
+        }
+      }
+    }
   }
   .table-wrapper-basic-fees {
     &.membership-table-wrapper {
@@ -1962,7 +1976,7 @@ section.perks {
       }
     }
     &.rates-page-body.membership {
-      padding-bottom: 3rem;
+      padding-bottom: 6rem;
     }
   }
 
@@ -2010,7 +2024,7 @@ section.perks {
         }
         .table-responsive {
           table {
-            min-width: 800px;
+            // min-width: 800px;
             thead {
               tr {
                 th {
