@@ -75,9 +75,9 @@ export class Header extends LitElement {
               <div class="nav-area">
                 <nav>
                   <ul class="parent-nav">
-                     <li>
+                     <!-- <li>
                       <a class="nav-link" href="https://www.beechcreekgolfclub.com/OnlineStore">Online Store</a>
-                    </li>
+                    </li> -->
                     <li class="has-dropdown doesnt-have-mr">
                       <a class="nav-link" href="#">
                         About Us
