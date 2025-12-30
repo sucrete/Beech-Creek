@@ -24,11 +24,11 @@ export class Header extends LitElement {
                         >Membership</a
                       >
                     </li>
+
                     <li>
-                      <a class="nav-link" href="calendar.html">Events</a>
-                    </li>
-                    <li>
-                      <a class="nav-link" href="contact.html#instruction">Instruction</a>
+                      <a class="nav-link" href="contact.html#instruction"
+                        >Instruction</a
+                      >
                     </li>
                   </ul>
                 </nav>
@@ -75,9 +75,12 @@ export class Header extends LitElement {
               <div class="nav-area">
                 <nav>
                   <ul class="parent-nav">
-                     <!-- <li>
+                    <!-- <li>
                       <a class="nav-link" href="https://www.beechcreekgolfclub.com/OnlineStore">Online Store</a>
                     </li> -->
+                    <li>
+                      <a class="nav-link" href="calendar.html">Events</a>
+                    </li>
                     <li class="has-dropdown doesnt-have-mr">
                       <a class="nav-link" href="#">
                         About Us
