@@ -24,7 +24,7 @@ export class Footer extends LitElement {
                         <li><a href="/membership-fees.html">membership</a></li>
                         <li><a href="/calendar.html">events</a></li>
                         <li><a href="/contact.html#instruction">instruction</a></li>
-                        <li><a href="https://www.beechcreekgolfclub.com/OnlineStore">online store</a></li>
+                        <!-- <li><a href="https://www.beechcreekgolfclub.com/OnlineStore">online store</a></li> -->
                         <li>
                           <a href="/contact.html#message-us">message us</a>
                         </li>
