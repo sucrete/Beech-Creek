@@ -163,7 +163,7 @@ export class Footer extends LitElement {
               </div>
 
               <div class="col-12 col-lg-4">
-                <a class="teequest-link no-underline" href="javascript:void(0)">
+                <a class="teequest-link no-underline" href="https://portal.teequest.net/portal" target="_blank">
                   <svg
                     class="svg-inline--fa fa-gears"
                     aria-hidden="true"
