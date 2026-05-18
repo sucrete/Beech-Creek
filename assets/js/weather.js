@@ -2,8 +2,9 @@
 //* This script will be most effective for courses inside the Eastern Time Zone
 
 //~ Standard Variables
-const latLong = "33.971,-80.534";
-const apiUrl = `https://api.pirateweather.net/forecast/EqRw5datS5zL99ze3FwQ8Q7PJEtJAC0i/${latLong}?exclude=minutely,hourly,alerts,flags`;
+const lat = 33.971;
+const lon = -80.534;
+const apiUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,weather_code&daily=temperature_2m_max,temperature_2m_min,weather_code&temperature_unit=fahrenheit&timezone=America%2FNew_York&forecast_days=5`;
 
 // Days of the week
 const days = [
@@ -18,7 +19,7 @@ const days = [
 
 var weatherData;
 
-//~ First call Pirate Weather API
+//~ Fetch Open-Meteo API
 async function getWeather() {
   await fetch(apiUrl, { cache: "no-store" })
     .then((response) => {
@@ -28,19 +29,16 @@ async function getWeather() {
       return response.json();
     })
     .then((data) => {
-      // console.log(JSON.stringify(data, null, 2));
       weatherData = data;
-      return data;
     })
     .catch((error) => {
       console.error("Error:", error);
     });
 }
 
-//~ Begin DOM manipulation - fired when fetch to API is finished - receives data object
+//~ Begin DOM manipulation - fired when fetch to API is finished
 async function populateDOM() {
   await getWeather();
-  // now you can directly use jsonData
 
   //~ grab all DOM elements
   // today
@@ -66,78 +64,89 @@ async function populateDOM() {
   const threeDaysFromTodayHiLo =
     document.getElementsByClassName("TDFT-hi-lo")[0];
 
-  //~ Set Today's Weather
-  const today = weatherData.currently;
-  // set today's icon
-  const iconPath = assignIcon(today.icon);
-  weatherIcon.src = `./assets/images/icons/weather/${iconPath}-line.svg`;
+  //~ Set Today's Weather — from current conditions block
+  const currentTemp = weatherData.current.temperature_2m;
+  const currentCode = weatherData.current.weather_code;
 
-  // set today's temperature readable
-  theTemp.innerHTML = Math.ceil(today.temperature);
-
-  // set today's weather readable
-  weather.innerHTML = today.summary;
+  weatherIcon.src = `./assets/images/icons/weather/${assignIcon(currentCode)}-line.svg`;
+  theTemp.innerHTML = Math.ceil(currentTemp);
+  weather.innerHTML = wmoSummary(currentCode);
 
   //* check for existence of .banner-temp and add to DOM
-  const bannerTemp = document.getElementsByClassName('banner-temp')[0];
+  const bannerTemp = document.getElementsByClassName("banner-temp")[0];
   if (bannerTemp) {
-    bannerTemp.innerHTML = Math.ceil(today.temperature)
-  } 
+    bannerTemp.innerHTML = Math.ceil(currentTemp);
+  }
 
+  const daily = weatherData.daily;
 
-  //~ set tomorrow's Weather
-  const tomorrow = weatherData.daily.data[2];
-  tomorrowDay.innerHTML = days[new Date(tomorrow.time * 1000).getDay()];
-  tomorrowWeatherIcon.src = `./assets/images/icons/weather/${assignIcon(
-    tomorrow.icon
-  )}.svg`;
-  tomorrowHiLo.innerHTML = `${Math.ceil(tomorrow.temperatureHigh)}°/${Math.ceil(
-    tomorrow.temperatureLow
-  )}°`;
+  //~ set tomorrow's Weather (daily index 1)
+  tomorrowDay.innerHTML = days[localDay(daily.time[1])];
+  tomorrowWeatherIcon.src = `./assets/images/icons/weather/${assignIcon(daily.weather_code[1])}.svg`;
+  tomorrowHiLo.innerHTML = `${Math.ceil(daily.temperature_2m_max[1])}°/${Math.ceil(daily.temperature_2m_min[1])}°`;
 
-  //~ set day after tomorrow's Weather
-  const DAT = weatherData.daily.data[3];
-  dayAfterTomorrowDay.innerHTML = days[new Date(DAT.time * 1000).getDay()];
-  dayAfterTomorrowIcon.src = `./assets/images/icons/weather/${assignIcon(
-    DAT.icon
-  )}.svg`;
-  dayAfterTomorrowHiLo.innerHTML = `${Math.ceil(DAT.temperatureHigh)}°/${Math.ceil(
-    DAT.temperatureLow
-  )}°`;
+  //~ set day after tomorrow's Weather (daily index 2)
+  dayAfterTomorrowDay.innerHTML = days[localDay(daily.time[2])];
+  dayAfterTomorrowIcon.src = `./assets/images/icons/weather/${assignIcon(daily.weather_code[2])}.svg`;
+  dayAfterTomorrowHiLo.innerHTML = `${Math.ceil(daily.temperature_2m_max[2])}°/${Math.ceil(daily.temperature_2m_min[2])}°`;
 
-  //~ set three days from today's Weather
-  const thirdOut = weatherData.daily.data[4];
-  threeDaysFromTodayDay.innerHTML =
-    days[new Date(thirdOut.time * 1000).getDay()];
-  threeDaysFromTodayIcon.src = `./assets/images/icons/weather/${assignIcon(
-    thirdOut.icon
-  )}.svg`;
-  threeDaysFromTodayHiLo.innerHTML = `${Math.ceil(thirdOut.temperatureHigh)}°/${Math.ceil(
-    thirdOut.temperatureLow
-  )}°`;
+  //~ set three days from today's Weather (daily index 3)
+  threeDaysFromTodayDay.innerHTML = days[localDay(daily.time[3])];
+  threeDaysFromTodayIcon.src = `./assets/images/icons/weather/${assignIcon(daily.weather_code[3])}.svg`;
+  threeDaysFromTodayHiLo.innerHTML = `${Math.ceil(daily.temperature_2m_max[3])}°/${Math.ceil(daily.temperature_2m_min[3])}°`;
 }
 
-getWeather();
 populateDOM();
 
-const assignIcon = function (icon) {
-  // console.log(`%c${icon}`, "color: orange");
-  let iconSrc;
-  if (icon == "clear-day" || icon == "clear-night") {
-    iconSrc = "sun";
-  } else if (icon == "rain") {
-    iconSrc = "rain";
-  } else if (icon == "snow" || icon == "sleet") {
-    iconSrc = "snow";
-  } else if (icon == "wind") {
-    iconSrc = "wind";
-  } else if (icon == "fog") {
-    iconSrc = "foggy";
-  } else if (icon == "cloudy") {
-    iconSrc = "cloudy";
-  } else if (icon == "partly-cloudy-day" || icon == "partly-cloudy-night") {
-    iconSrc = "part-cloud";
-  }
-  // console.log(`%c${iconSrc}`, "color: yellow");
-  return iconSrc;
+// Parse "YYYY-MM-DD" string as local midnight to avoid UTC day-shift
+function localDay(dateStr) {
+  const [y, m, d] = dateStr.split("-").map(Number);
+  return new Date(y, m - 1, d).getDay();
+}
+
+// Map WMO weather codes to project icon names
+const assignIcon = function (code) {
+  if (code === 0) return "sun";
+  if (code <= 2) return "part-cloud";
+  if (code === 3) return "cloudy";
+  if (code === 45 || code === 48) return "foggy";
+  if (code >= 51 && code <= 67) return "rain";
+  if (code >= 71 && code <= 77) return "snow";
+  if (code >= 80 && code <= 82) return "rain";
+  if (code >= 85 && code <= 86) return "snow";
+  if (code >= 95) return "rain";
+  return "sun";
 };
+
+// Human-readable summaries for WMO weather codes
+function wmoSummary(code) {
+  const summaries = {
+    0: "Clear",
+    1: "Mostly Clear",
+    2: "Partly Cloudy",
+    3: "Overcast",
+    45: "Foggy",
+    48: "Foggy",
+    51: "Light Drizzle",
+    53: "Drizzle",
+    55: "Heavy Drizzle",
+    61: "Light Rain",
+    63: "Rain",
+    65: "Heavy Rain",
+    66: "Freezing Rain",
+    67: "Heavy Freezing Rain",
+    71: "Light Snow",
+    73: "Snow",
+    75: "Heavy Snow",
+    77: "Snow Grains",
+    80: "Light Showers",
+    81: "Showers",
+    82: "Heavy Showers",
+    85: "Snow Showers",
+    86: "Heavy Snow Showers",
+    95: "Thunderstorm",
+    96: "Thunderstorm w/ Hail",
+    99: "Thunderstorm w/ Hail",
+  };
+  return summaries[code] || "Cloudy";
+}
